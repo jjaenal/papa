@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:./ui/common/app_colors.dart';
-import 'package:./ui/common/ui_helpers.dart';
+import 'package:papa/ui/common/app_colors.dart';
+import 'package:papa/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
@@ -10,7 +10,7 @@ class NoticeSheet extends StackedView<NoticeSheetModel> {
   final Function(SheetResponse)? completer;
   final SheetRequest request;
   const NoticeSheet({Key? key, required this.completer, required this.request})
-    : super(key: key);
+      : super(key: key);
 
   @override
   Widget builder(

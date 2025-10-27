@@ -1,5 +1,16 @@
 # Project Rules
 
+## Tech Stack
+
+- Dart
+- Flutter
+- Supabase
+- Alway use Stacked to create:
+  - view
+  - dialog
+  - bottom sheet
+  - widget
+
 ## 1. Code Quality & Linting
 
 ### Linting Process

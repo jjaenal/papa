@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:./ui/common/app_colors.dart';
-import 'package:./ui/common/ui_helpers.dart';
+import 'package:papa/ui/common/app_colors.dart';
+import 'package:papa/ui/common/ui_helpers.dart';
 
 import 'home_viewmodel.dart';
 

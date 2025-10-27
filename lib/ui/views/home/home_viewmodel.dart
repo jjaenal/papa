@@ -1,7 +1,7 @@
-import 'package:./app/app.bottomsheets.dart';
-import 'package:./app/app.dialogs.dart';
-import 'package:./app/app.locator.dart';
-import 'package:./ui/common/app_strings.dart';
+import 'package:papa/app/app.bottomsheets.dart';
+import 'package:papa/app/app.dialogs.dart';
+import 'package:papa/app/app.locator.dart';
+import 'package:papa/ui/common/app_strings.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
