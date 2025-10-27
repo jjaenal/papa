@@ -11,6 +11,17 @@ class HomeView extends StackedView<HomeViewModel> {
   @override
   Widget builder(BuildContext context, HomeViewModel viewModel, Widget? child) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('PaPa - Home'),
+        actions: [
+          IconButton(
+            key: const Key('logout_button'),
+            icon: const Icon(Icons.logout),
+            onPressed: viewModel.logout,
+            tooltip: 'Logout',
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -22,20 +33,66 @@ class HomeView extends StackedView<HomeViewModel> {
                 verticalSpaceLarge,
                 Column(
                   children: [
-                    const Text(
-                      'Hello, STACKED!',
-                      style: TextStyle(
-                        fontSize: 35,
-                        fontWeight: FontWeight.w900,
+                    // User greeting section
+                    Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          children: [
+                            const CircleAvatar(
+                              radius: 40,
+                              backgroundColor: kcDarkGreyColor,
+                              child: Icon(
+                                Icons.person,
+                                size: 40,
+                                color: Colors.white,
+                              ),
+                            ),
+                            verticalSpaceSmall,
+                            const Text(
+                               'Selamat datang!',
+                               style: TextStyle(
+                                 fontSize: 24,
+                                 fontWeight: FontWeight.bold,
+                               ),
+                             ),
+                            verticalSpaceSmall,
+                            Text(
+                              viewModel.userEmail ?? 'User',
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    verticalSpaceMedium,
-                    MaterialButton(
-                      color: Colors.black,
-                      onPressed: viewModel.incrementCounter,
-                      child: Text(
-                        viewModel.counterLabel,
-                        style: const TextStyle(color: Colors.white),
+                    verticalSpaceLarge,
+                    // Counter section
+                    Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          children: [
+                            const Text(
+                              'Counter Demo',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            verticalSpaceMedium,
+                            MaterialButton(
+                              color: Colors.black,
+                              onPressed: viewModel.incrementCounter,
+                              child: Text(
+                                viewModel.counterLabel,
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

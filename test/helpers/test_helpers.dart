@@ -1,7 +1,9 @@
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:papa/app/app.locator.dart';
+import 'package:papa/services/auth_service.dart';
 import 'package:stacked_services/stacked_services.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 // @stacked-import
 
 import 'test_helpers.mocks.dart';
@@ -12,6 +14,11 @@ import 'test_helpers.mocks.dart';
     MockSpec<NavigationService>(onMissingStub: OnMissingStub.returnDefault),
     MockSpec<BottomSheetService>(onMissingStub: OnMissingStub.returnDefault),
     MockSpec<DialogService>(onMissingStub: OnMissingStub.returnDefault),
+    MockSpec<AuthService>(onMissingStub: OnMissingStub.returnDefault),
+    MockSpec<SupabaseClient>(onMissingStub: OnMissingStub.returnDefault),
+    MockSpec<GoTrueClient>(onMissingStub: OnMissingStub.returnDefault),
+    MockSpec<AuthResponse>(onMissingStub: OnMissingStub.returnDefault),
+    MockSpec<User>(onMissingStub: OnMissingStub.returnDefault),
     // @stacked-mock-spec
   ],
 )
@@ -19,6 +26,7 @@ void registerServices() {
   getAndRegisterNavigationService();
   getAndRegisterBottomSheetService();
   getAndRegisterDialogService();
+  getAndRegisterAuthService();
   // @stacked-mock-register
 }
 
@@ -73,6 +81,13 @@ MockDialogService getAndRegisterDialogService() {
   _removeRegistrationIfExists<DialogService>();
   final service = MockDialogService();
   locator.registerSingleton<DialogService>(service);
+  return service;
+}
+
+MockAuthService getAndRegisterAuthService() {
+  _removeRegistrationIfExists<AuthService>();
+  final service = MockAuthService();
+  locator.registerSingleton<AuthService>(service);
   return service;
 }
 

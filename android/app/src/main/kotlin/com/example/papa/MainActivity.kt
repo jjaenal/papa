@@ -1,4 +1,4 @@
-package com.example.papa
+package com.tuangkang.papa
 
 import io.flutter.embedding.android.FlutterActivity
 
