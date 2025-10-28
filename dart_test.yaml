@@ -1,0 +1,7 @@
+# Test configuration for dart test runner
+# This file configures test tags and other test-related settings
+
+# Define test tags
+tags:
+  golden:
+    description: "Golden file tests for UI regression testing"

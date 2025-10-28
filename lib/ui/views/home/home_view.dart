@@ -50,12 +50,12 @@ class HomeView extends StackedView<HomeViewModel> {
                             ),
                             verticalSpaceSmall,
                             const Text(
-                               'Selamat datang!',
-                               style: TextStyle(
-                                 fontSize: 24,
-                                 fontWeight: FontWeight.bold,
-                               ),
-                             ),
+                              'Selamat datang!',
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             verticalSpaceSmall,
                             Text(
                               viewModel.userEmail ?? 'User',

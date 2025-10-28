@@ -11,7 +11,8 @@ class OnboardingView extends StackedView<OnboardingViewModel> {
   const OnboardingView({super.key});
 
   @override
-  Widget builder(BuildContext context, OnboardingViewModel viewModel, Widget? child) {
+  Widget builder(
+      BuildContext context, OnboardingViewModel viewModel, Widget? child) {
     return Scaffold(
       appBar: AppBar(title: const Text('Profil Singkat')),
       body: SafeArea(
@@ -36,7 +37,8 @@ class OnboardingView extends StackedView<OnboardingViewModel> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: viewModel.canSubmit ? viewModel.submitProfile : null,
+                  onPressed:
+                      viewModel.canSubmit ? viewModel.submitProfile : null,
                   child: const Text('Simpan & Lanjut'),
                 ),
               ),
@@ -48,5 +50,6 @@ class OnboardingView extends StackedView<OnboardingViewModel> {
   }
 
   @override
-  OnboardingViewModel viewModelBuilder(BuildContext context) => OnboardingViewModel();
+  OnboardingViewModel viewModelBuilder(BuildContext context) =>
+      OnboardingViewModel();
 }

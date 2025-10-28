@@ -4,14 +4,15 @@ import 'package:integration_test/integration_test.dart';
 import 'package:papa/main.dart' as app;
 
 /// Integration test untuk UI autentikasi
-/// 
+///
 /// Test ini memverifikasi bahwa UI login berfungsi dengan baik
 /// tanpa memerlukan konfigurasi OAuth yang kompleks
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   group('Authentication UI Tests', () {
-    testWidgets('Login UI elements are present and functional', (WidgetTester tester) async {
+    testWidgets('Login UI elements are present and functional',
+        (WidgetTester tester) async {
       // Launch the app
       app.main();
       await tester.pumpAndSettle();
@@ -33,14 +34,15 @@ void main() {
       // Enter and clear phone number
       await tester.enterText(phoneInput, '081234567890');
       await tester.pumpAndSettle();
-      
+
       await tester.enterText(phoneInput, '');
       await tester.pumpAndSettle();
 
       debugPrint('✅ All UI elements are present and functional');
     });
 
-    testWidgets('Button interactions work without errors', (WidgetTester tester) async {
+    testWidgets('Button interactions work without errors',
+        (WidgetTester tester) async {
       // Launch the app
       app.main();
       await tester.pumpAndSettle();

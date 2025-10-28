@@ -19,7 +19,7 @@ class StartupViewModel extends BaseViewModel {
       // Continue gracefully even if env missing; onboarding can proceed
     }
     await Future.delayed(const Duration(milliseconds: 500));
-    
+
     // Navigate based on auth state
     if (_authService.isAuthenticated) {
       // User sudah login, arahkan ke onboarding

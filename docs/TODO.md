@@ -13,6 +13,11 @@
 - [ ] Import `supabase_schema.sql`
 - [ ] Implement Auth (phone(H95R835GLE543KKMV7YMJ1MM) + Google)
 - [ ] Basic onboarding flow (profil singkat)
+ - [x] Enhanced Auth error handling (reactive `lastError` on all flows)
+ - [x] Improved loading states (modal overlay + disable inputs)
+ - [x] Add error banner in Login UI for clearer feedback
+ - [x] Add `dart_test.yaml` golden tag config to remove warnings
+ - [x] Update unit tests to validate error handling scenarios
 
 ### Week 2 — Core Models & CRUD
 
