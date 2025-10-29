@@ -9,15 +9,17 @@
 ### Week 1 — Setup & Auth
 
 - [x] Init repo + license + README
-- [ ] Setup Supabase project (Auth + Database + Storage)
-- [ ] Import `supabase_schema.sql`
-- [ ] Implement Auth (phone(H95R835GLE543KKMV7YMJ1MM) + Google)
-- [ ] Basic onboarding flow (profil singkat)
- - [x] Enhanced Auth error handling (reactive `lastError` on all flows)
- - [x] Improved loading states (modal overlay + disable inputs)
- - [x] Add error banner in Login UI for clearer feedback
- - [x] Add `dart_test.yaml` golden tag config to remove warnings
- - [x] Update unit tests to validate error handling scenarios
+- [x] Setup Supabase project (Auth + Database + Storage)
+- [x] Import `supabase_schema.sql`
+- [x] Implement Auth (phone OTP lokal + Google OAuth via Supabase)
+- [x] Basic onboarding flow (profil singkat)
+- [x] Enhanced Auth error handling (reactive `lastError` on all flows)
+- [x] Improved loading states (modal overlay + disable inputs)
+- [x] Add error banner in Login UI for clearer feedback
+- [x] Add `dart_test.yaml` golden tag config to remove warnings
+- [x] Update unit tests to validate error handling scenarios
+- [x] Add loading spinner to buttons for better UX
+- [x] Fix golden tests with SharedPreferences mocking
 
 ### Week 2 — Core Models & CRUD
 
@@ -67,3 +69,17 @@
 - Paket hanya aktif jika jumlah anggota == target_anggota
 - Cicilan yang dihitung per anggota harus konsisten dan dapat diverifikasi
 - Manual payment flow: upload bukti → host approve → status updated
+
+## Done ✅ — Progres Neumorphic UI
+
+- [x] `NeumorphicActionButton`: tambah `enabled` + `icon` opsional
+- [x] `NeumorphicActionButton`: tambah `isLoading` (spinner kecil + auto-disable)
+- [x] `NeumorphicTextField`: widget input reusable untuk style konsisten
+- [x] Refactor `LoginView` dan `OnboardingView` ke widget Neumorphic
+- [x] Tambah widget tests untuk tombol & input; golden untuk dialog & views
+- [x] Linting bersih (`flutter analyze`) dan semua test lulus (`flutter test`)
+
+## Future Improvements 💡
+
+- [ ] Evaluasi penggunaan paket fork `flutter_neumorphic_plus` (https://pub.dev/packages/flutter_neumorphic_plus)
+  - Catatan: dapat mempercepat pengembangan UI, tetap jaga konsistensi dengan Stacked
